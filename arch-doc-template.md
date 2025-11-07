@@ -6,16 +6,16 @@ The problem is to enable a global audience to vote in real time during a Live TV
 
 ### 2. 🎯 Goals
 
-List in form of bullets what goals do have. Here it's great to have 5-10 lines.
-Example:
-```
-1. Solution needs to be fast! Performance for all operations bellow ~1 ms.
-2. Security is non-negociable! Security at-rest, transite, threat analysis and review for by at least 3 different people.
-3. Composable solution. Users should be able to mix and match components instead of building all for scratch. ie: map component can be reused on counters component.
-4. Work offline: Re-consiliation, CRDTs are a must.
-5. Cloud-Native: All backend must be 100% cloud native, using open-source and should and should be cloud-agnostic, avoid propretaty apis.
-```
-Recommended Learning: http://diego-pacheco.blogspot.com/2020/05/education-vs-learning.html
+1. Data Integrity & Durability - exactly-once voting, zero data loss, cross-AZ replication
+2. Performance & Scale - handle up to 300M users and 250k RPS peak load
+3. Low Latency - p99 <150 ms write, <200 ms read, UI refresh <1 s
+4. Security & Anti-Fraud - duplicate vote prevention, bot mitigation, rate limiting, CAPTCHA
+5. Observability & Auditability - end-to-end tracing, immutable logs, metrics, dashboards
+6. Fault Tolerance - queue-based backpressure, retries, no dropped votes
+7. Modular Architecture - independently scalable and replaceable components
+8. Cost Efficiency – balance SLA vs operational cost through dynamic scaling
+9. Compliance & Privacy - ensure GDPR/CCPA compliance and data anonymization
+10. Operational Simplicity - IaC, automated deploys, minimal manual ops
 
 ### 3. 🎯 Non-Goals
 
